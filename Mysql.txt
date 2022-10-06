@@ -1,0 +1,38 @@
+Base de datos: estudiante2996
+Tablas: estudiantes, sexo, carrera
+
+SELECT e.apellido, e.nombre, s.nmSexo //Selecciona de las tabla estudiante apellido y nombre y de al tabla sexo nsSexo
+FROM estudiante AS e, sexo AS s // asina un alias a la tabla estudiante y al tabla sexo
+WHERE e.idSexo=s.idSexo //hace la intersección entre idSexo de e y de s
+order by e.apellido //ordena por apellido 
+
+
+SELECT e.apellido, e.nombre, s.nmSexo //Selecciona de las tabla estudiante apellido y nombre y de al tabla sexo nsSexo
+FROM estudiante AS e, sexo AS s // asina un alias a la tabla estudiante y al tabla sexo
+WHERE e.idSexo=s.idSexo AND e.idCarrera=s.idCarrera  //hace la intersección entre idSexo de e y de s
+order by e.apellido //ordena por apellido 
+
+
+FK: llave foranea //evita que metan info que no existe (si son 6 carreras no se puede meter el numero 10), se evitan ambiguedades
+modificar tabla sexo
+ir a pestaña FK 
+FK name(idCarrera), Referenced Table(`estudiante2996`.`carrera` )
+apply 
+
+
+SELECT e.apellido, e.nombre, s.nmSexo //Selecciona de las tabla estudiante apellido y nombre y de al tabla sexo nsSexo
+FROM estudiante AS e, sexo AS s // asina un alias a la tabla estudiante y al tabla sexo
+WHERE e.idCarrera=s.idCarrera AND apellido="Cardona" //consultar personas cuyo apellido sea cardona
+order by e.apellido //ordena por apellido
+
+SELECT e.apellido, e.nombre, s.nmSexo //Selecciona de las tabla estudiante apellido y nombre y de al tabla sexo nsSexo
+FROM estudiante AS e, sexo AS s // asina un alias a la tabla estudiante y al tabla sexo
+WHERE e.idCarrera=s.idCarrera AND apellido like "Car" //consultar personas cuyo apellido contega un "car"
+order by e.apellido //ordena por apellido
+
+SELECT e.apellido, e.nombre, s.nmSexo //Selecciona de las tabla estudiante apellido y nombre y de al tabla sexo nsSexo
+FROM estudiante AS e, sexo AS s // asina un alias a la tabla estudiante y al tabla sexo
+WHERE e.idCarrera=s.idCarrera AND apellido like "%a%" //consultar personas cuyo apellido contega un "a"
+order by e.apellido //ordena por apellido
+
+no verificar la sentencia en un lenguaje de programación 
