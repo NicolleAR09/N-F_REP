@@ -106,5 +106,24 @@ console.log(emp.nombreCompleto()); //Resultado: Luis Torres
 
 //el empleado hereda todos los atributos de persona
 
+//-------------------------------TALLER 
 
+class ElementoInstituncional{
+    constructor(id, tipo, version){
+        this.id = id;
+        this.tipo = tipo;
+        this.version = version;
+        
+    }
 
+    nombreMetodo(){
+        return `COMP18S_${this.id}_${this.tipo}_${this.version}.midoc`;
+    }
+}
+
+var actividad = new ElementoInstituncional(1, "Interactiva", "V1");
+console.log(actividad.nombreMetodo());
+var actividad2 = new ElementoInstituncional(2, "Ejercicio", "V2");
+console.log(actividad2.nombreMetodo());
+var actividad3 = new ElementoInstituncional(3, "Laboratorio", "V1");
+console.log(actividad3.nombreMetodo());
